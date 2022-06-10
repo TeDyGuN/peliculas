@@ -11,5 +11,10 @@ const PagesRoutes: Routes = [
       path: 'actors',
       component: ActorComponent
     },
+    {
+      path: '',
+      redirectTo: '/movies',
+      pathMatch: 'full'
+    }
 ];
 export const PAGES_ROUTES = RouterModule.forChild(PagesRoutes);
