@@ -6,6 +6,7 @@ import { LayoutModule } from '../layout/layout.module';
 import { RouterModule } from '@angular/router';
 import { PAGES_ROUTES } from './pages.routing';
 import { ActorComponent } from './actor/actor.component';
+import { PipesModule } from '../pipes/pipes.module';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { ActorComponent } from './actor/actor.component';
     CommonModule,
     LayoutModule,
     RouterModule,
-    PAGES_ROUTES
+    PAGES_ROUTES,
+    PipesModule
   ]
 })
 export class PagesModule { }

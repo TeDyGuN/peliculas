@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Actor } from 'src/app/models/Actor';
+import { ActorService } from 'src/app/services/actor.service';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-actor',
@@ -6,10 +9,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./actor.component.css']
 })
 export class ActorComponent implements OnInit {
-
-  constructor() { }
+  actors: Actor[] = [];
+  imageUrl = environment.imagesEndpoint;
+  constructor(
+    private actorService: ActorService
+  ) { }
 
   ngOnInit(): void {
+    this.actorService.getActorsByPopularity(1)
+      .subscribe((resp: any) => {
+        this.actors = resp.results;
+        console.log(this.actors);
+      });
   }
 
 }
