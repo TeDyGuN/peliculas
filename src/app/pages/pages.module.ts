@@ -7,12 +7,14 @@ import { RouterModule } from '@angular/router';
 import { PAGES_ROUTES } from './pages.routing';
 import { ActorComponent } from './actor/actor.component';
 import { PipesModule } from '../pipes/pipes.module';
+import { MovieComponent } from './movie/movie.component';
 
 @NgModule({
   declarations: [
     PagesComponent,
     MoviesComponent,
-    ActorComponent
+    ActorComponent,
+    MovieComponent
   ],
   imports: [
     CommonModule,

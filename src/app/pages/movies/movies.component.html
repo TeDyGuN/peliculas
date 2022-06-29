@@ -27,7 +27,7 @@
                 <div class="card">
                     <img [src]="imageUrl + movie.poster_path" class="card-img-top" alt="..." />
                     <div class="card-body">
-                        <h5 class="card-title">{{ movie.title }}</h5>
+                        <a class="card-title" [routerLink]="['/movie', this.movie.id]">{{ movie.title }}</a>
                         <span class="badge bg-success" *ngIf="movie.vote_average >= 7">{{
                             movie.vote_average
                             }}</span>

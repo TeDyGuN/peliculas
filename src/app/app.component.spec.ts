@@ -4,6 +4,7 @@ import { AppComponent } from './app.component';
 
 describe('AppComponent', () => {
   beforeEach(async () => {
+
     await TestBed.configureTestingModule({
       imports: [
         RouterTestingModule
@@ -23,7 +24,7 @@ describe('AppComponent', () => {
   it(`should have as title 'peliculas'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('peliculas');
+    expect(app.title).toEqual('PELICULAS');
   });
 
   it('should render title', () => {

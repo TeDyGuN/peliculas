@@ -15,4 +15,9 @@ export class MovieService {
     const headers = new HttpHeaders().set('Content-Type', 'application/json');
     return this.http.get(urlPopularity, {headers: headers});
   }
+  getDetailsMovie(id: any) {
+    let urlPopularity = `${this.urlMovies}/${id}?api_key=b2654a09df86a4f38994b4c50903c874&language=es`;
+    const headers = new HttpHeaders().set('Content-Type', 'application/json');
+    return this.http.get(urlPopularity, {headers: headers});
+  }
 }

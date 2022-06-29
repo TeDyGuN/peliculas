@@ -1,5 +1,6 @@
 import { RouterModule, Routes } from "@angular/router";
 import { ActorComponent } from "./actor/actor.component";
+import { MovieComponent } from "./movie/movie.component";
 import { MoviesComponent } from "./movies/movies.component";
 
 const PagesRoutes: Routes = [
@@ -10,6 +11,10 @@ const PagesRoutes: Routes = [
     {
       path: 'actors',
       component: ActorComponent
+    },
+    {
+      path: 'movie/:id',
+      component: MovieComponent
     },
     {
       path: '',
